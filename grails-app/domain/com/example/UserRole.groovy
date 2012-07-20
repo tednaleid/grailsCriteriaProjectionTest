@@ -49,9 +49,4 @@ class UserRole implements Serializable {
 	static void removeAll(Role role) {
 		executeUpdate 'DELETE FROM UserRole WHERE role=:role', [role: role]
 	}
-
-	static mapping = {
-		id composite: ['role', 'user']
-		version false
-	}
 }
